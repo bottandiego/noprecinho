@@ -1,35 +1,59 @@
-# NoPrecinho Grocery Price Tracker / Rastreador de Preços NoPrecinho
+# NoPrecinho
 
-A simple, lightweight web app to keep track of what you pay for groceries and see where and when you got the best deals. Built as a single self-contained file using vanilla HTML, CSS, and JavaScript, it runs on literally anything that can load a webpage and requires zero server communication, making offline use fully supported and incentivized.
+A personal grocery price tracker. Log what you paid, compare package sizes, and see whether today’s shelf price is actually a deal.
 
----
+This project was **vibe coded for personal use**. It is not a product, a startup, or a carefully engineered platform. It is a small offline web app that grew out of wanting cheaper coffee and fewer “wait, was this cheaper last week?” moments at the supermarket.
 
-## Features
+It is licensed under the **[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)**. You may run it, copy it, change it, and share it however you wish, as long as you keep the GPL terms when you redistribute it. Fork it, strip it, restyle it, or ignore half of it. It is yours to use.
 
-* **Smart Comparisons:** Automatically calculates the price per kilogram, liter, or unit so you can easily compare different package sizes.
-* **Historical Lows:** Highlights when you hit a new record low price on an item with a celebratory animation.
-* **Zero Dependencies:** Pure HTML, CSS, and JavaScript with no external frameworks or backend servers. It runs locally and entirely offline.
-* **Easy Import & Export:** Bring your past data along or back everything up using standard CSV files.
-* **Privacy First:** Everything is stored locally right in your browser, with no account setup required.
+## What it does
 
-## About
+NoPrecinho keeps a history of purchases (product, price, store, optional quantity) and turns that into a summary you can actually use in the aisle.
 
-This app was vibe coded for personal use to help keep grocery spending in check. It is licensed under the **GNU General Public License v3 (GPLv3)**, meaning anyone is free to use, modify, or do whatever they want with it.
+- **Price summary** — one row per product: lowest price, latest price, a small trend sparkline, and whether you are still at the historical low.
+- **Normalized comparison** — optional quantity in g, kg, ml, L, or units so 500 ml and 1 L can be compared fairly (price per kg / L / unit). The “lowest” is always the best *normalized* price when sizes exist.
+- **New purchase** — product, price paid, store, optional size. Dates are recorded automatically. Similar product names get a “did you mean?” prompt so “Leite integral” and “leite Integral” do not fork into two histories.
+- **Price checker** — for use in the store. Pick a known product, type the shelf price (and size if needed). Nothing is saved. You get a quick “great deal / normal / expensive” read versus your lowest and latest.
+- **Store comparison** — a basket index across stores that carry the same items: how each store stacks up against the cheapest price per item, weighted by how often you buy it.
+- **History and formulas** — per-product purchase history, plus a “show formula” drawer that spells out the arithmetic instead of hiding it.
 
----
+## Data and privacy
 
-## Versão em Português (Brasil)
+Everything stays on your device. There is no account, no server, and no analytics.
 
-Um aplicativo web simples e leve para registrar o que você paga pelas compras de supermercado e descobrir onde e quando aconteceram as melhores ofertas. Construído em um único arquivo autossuficiente usando apenas HTML, CSS e JavaScript, ele roda em praticamente qualquer dispositivo que abra uma página web e não se comunica com nenhum servidor, tornando o uso offline não apenas possível, mas incentivado.
+- By default, purchases live in **this browser on this device**.
+- In Chrome or Edge you can **link a JSON file** on disk (File System Access API). That file becomes the source of truth; browser storage is only a fallback.
+- **CSV import/export** for a summary or the full log. Imports are additive; duplicates are skipped. You can also merge two product names if you accidentally split a history.
+- Settings (language, currency symbol, decimal mark, theme) stay in the browser.
 
-### Funcionalidades
+If local storage is blocked, the app will warn you: data will not survive a refresh.
 
-* **Comparações Inteligentes:** Calcula automaticamente o preço por quilo, litro ou unidade para facilitar a comparação entre embalagens de tamanhos diferentes.
-* **Mínimas Históricas:** Destaca quando você atinge um novo recorde de menor preço em um item.
-* **Totalmente Autossuficiente:** Feito em HTML, CSS e JavaScript puro, sem dependências externas ou servidores. Roda localmente e 100% offline.
-* **Importação e Exportação:** Faça backup ou traga seus dados antigos usando arquivos CSV padrão.
-* **Privacidade em Primeiro Lugar:** Tudo fica salvo localmente no seu navegador, sem necessidade de cadastro.
+## How it feels
 
-### Sobre
+- Works **offline** as a PWA (service worker caches the app shell). Install it like a standalone app if your browser offers that.
+- **Portuguese (Brazil)** and **English**.
+- Currency symbol and decimal mark are yours to set (defaults to `R$` and comma).
+- Light/dark plus a few palettes (coral, slate, stone, indigo).
+- Mobile-first layout, large tap targets, no build step.
 
-Este aplicativo foi desenvolvido por puro lazer (*vibe coded*) para uso pessoal com o objetivo de controlar os gastos com mercado. Ele está licenciado sob a licença **GPLv3**, o que significa que qualquer pessoa é livre para usá-lo, modificá-lo ou fazer o que quiser com ele.
+## Running it
+
+This is static HTML, CSS, and JavaScript. No npm, no backend.
+
+1. Serve the folder over HTTP (`https://` or `localhost`). A service worker will not register from a `file://` URL.
+2. Open `index.html`.
+3. Optionally add it to your home screen / install it as an app.
+
+A one-liner if you have Python:
+
+```bash
+python -m http.server
+```
+
+Then visit `http://localhost:8000`.
+
+## License
+
+**GNU GPLv3.** Free to use for whatever you want. If you distribute the app or a modified version, you must also distribute it under GPLv3 and keep the corresponding source available. See the [full license text](https://www.gnu.org/licenses/gpl-3.0.html).
+
+Made with love (for cheap coffee).
