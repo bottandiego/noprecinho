@@ -1,4 +1,4 @@
-# NoPrecinho
+# noprecinho
 
 ## English
 
@@ -10,7 +10,7 @@ It is licensed under the **[GNU General Public License v3.0](https://www.gnu.org
 
 ### What it does
 
-NoPrecinho keeps a history of purchases (product, price, store, optional quantity) and turns that into a summary you can actually use in the aisle.
+**noprecinho** keeps a history of purchases (product, price, store, optional quantity) and turns that into a summary you can actually use in the aisle.
 
 - **Price summary** — one row per product: lowest price, latest price, a small trend sparkline, and whether you are still at the historical low.
 - **Normalized comparison** — optional quantity in g, kg, ml, L, or units so 500 ml and 1 L can be compared fairly (price per kg / L / unit). The “lowest” is always the best *normalized* price when sizes exist.
