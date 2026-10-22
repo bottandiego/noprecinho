@@ -64,53 +64,53 @@ Then visit `http://localhost:8000`.
 
 ## Português (Brasil)
 
-Rastreador pessoal de preços de mercado. Anote o que você pagou, compare embalagens de tamanhos diferentes e veja se o preço da prateleira realmente vale a pena.
+Rastreador pessoal de preços de mercado. Registre o que você pagou, compare embalagens de tamanhos diferentes e veja se o preço da prateleira realmente vale a pena.
 
-Este projeto foi **vibe coded para uso pessoal**. Não é um produto, uma startup nem uma plataforma cuidadosamente engenheirada. É um app web pequeno e offline, nascido da vontade de café mais barato e de menos momentos de “espera, isso não estava mais barato semana passada?” no supermercado.
+Este projeto foi **vibe coded para uso pessoal**. Não é um produto, uma startup nem uma plataforma cuidadosamente engenheirada. É um app web pequeno e offline, nascido da vontade de ter café mais barato e de menos momentos de “peraí, isso não tava mais barato semana passada?”.
 
-Está licenciado sob a **[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)**. Você pode executar, copiar, alterar e compartilhar como quiser, desde que mantenha os termos da GPL ao redistribuir. Faça um fork, desmonte, mude o visual ou ignore metade. É seu para usar.
+Está licenciado sob a **[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)**. Você pode executar, copiar, alterar e compartilhar como quiser, desde que mantenha os termos da GPL ao redistribuir. Faça um fork, desmonte, mude o visual ou ignore metade do código. É seu para usar.
 
-### O que faz
+### O que ele faz
 
-O NoPrecinho guarda um histórico de compras (produto, preço, local, quantidade opcional) e transforma isso num resumo que dá para usar no corredor do mercado.
+O **noprecinho** guarda um histórico de compras (produto, preço, local e quantidade) e transforma isso num resumo que dá para usar no corredor do mercado.
 
-- **Resumo de preços** — uma linha por produto: menor preço, último preço, um sparkline de tendência, e se você ainda está na mínima histórica.
-- **Comparação normalizada** — quantidade opcional em g, kg, ml, L ou unidades, para 500 ml e 1 L poderem ser comparados de forma justa (preço por kg / L / un). O “menor” é sempre o melhor preço *normalizado* quando há tamanho informado.
-- **Nova compra** — produto, preço pago, local, tamanho opcional. A data é registrada automaticamente. Nomes parecidos disparam um “você quis dizer?” para “Leite integral” e “leite Integral” não virarem dois históricos.
-- **Verificador de preço** — para usar no mercado. Escolha um produto já registrado, informe o preço da prateleira (e o tamanho, se precisar). Nada é salvo. Você recebe um “ótimo negócio / preço normal / caro” em relação ao menor e ao último.
+- **Resumo de preços** — uma linha por produto: menor preço, último preço, um sparkline de tendência de preços, e se você ainda está na mínima histórica.
+- **Comparação normalizada** — informe a quantidade em g, kg, ml, L ou unidades, para 500ml e 1L poderem ser comparados de forma justa (preço por kg / L / un). O “menor” é sempre o melhor preço *normalizado* quando há tamanho informado.
+- **Nova compra** — produto, preço pago, local, tamanho da embalagem (ou quantidade de ítens). A data é registrada automaticamente. Nomes parecidos disparam um “você quis dizer x?” para “Leite integral” e “leite Integrall” não virarem dois históricos acidentalmente.
+- **Verificador de preço** — para usar no mercado. Escolha um produto já registrado, informe o preço da prateleira (e o tamanho, se precisar). Nada é salvo. Você recebe uma análise rápida de como o preço indicato está em relação ao menor e ao último.
 - **Comparação entre lojas** — um índice da cesta entre lojas que têm os mesmos itens: como cada uma se sai frente ao preço mais barato de cada produto, ponderado por quantas vezes você compra.
-- **Histórico e contas** — histórico de compras por produto, mais um painel “ver cálculo” que mostra a conta em vez de escondê-la.
+- **Histórico e contas** — histórico de compras por produto, mais um painel “ver cálculo” que mostra o cálculo completo para conferência.
 
 ### Dados e privacidade
 
 Tudo fica no seu dispositivo. Não há conta, servidor nem analytics.
 
-- Por padrão, as compras ficam **neste navegador, neste dispositivo**.
-- No Chrome ou no Edge você pode **vincular um arquivo JSON** no disco (File System Access API). Esse arquivo vira a fonte da verdade; o armazenamento do navegador é só reserva.
+- Por padrão, as compras ficam salvas no armazenamento do navegador usado, restritas ao seu dispositivo.
+- No Chrome ou no Edge você pode **vincular um arquivo JSON** em disco (File System Access API). Esse arquivo se torna seu banco de dados permitindo sincronização e compartilhamento com outros dispositivos; o armazenamento do navegador é só reserva.
 - **Importar/exportar CSV** do resumo ou do histórico completo. Importações se somam ao que já existe; duplicatas são ignoradas. Também dá para unir dois nomes de produto se o histórico tiver se dividido por acidente.
 - Configurações (idioma, símbolo da moeda, separador decimal, tema) ficam no navegador.
 
-Se o armazenamento local estiver bloqueado, o app avisa: os dados não sobrevivem a um recarregamento.
+Se o armazenamento local estiver bloqueado, o app avisa: os dados não sobrevivem um refresh.
 
-### Como é usar
+### Como é o uso
 
-- Funciona **offline** como PWA (o service worker guarda o app). Dá para instalar como app se o navegador oferecer.
+- Funciona **offline** como PWA (o service worker guarda o app). Dá para instalar como app se o navegador oferecer essa opção (Chrome/Edge).
 - **Português (Brasil)** e **inglês**.
 - Símbolo da moeda e separador decimal são seus (o padrão é `R$` e vírgula).
-- Claro/escuro e algumas paletas (coral, slate, stone, indigo).
-- Layout compatível com celular, alvos de toque grandes, sem etapa de build.
+- Modos claro/escuro em algumas paletas diferentes (coral, slate, stone, indigo).
+- Layout compatível com mobnile, alvos de toque grandes, sem etapa de build.
 
 ### Como rodar
 
 O app está publicado como GitHub Page. Basta visitar [https://bottandiego.github.io/noprecinho/](https://bottandiego.github.io/noprecinho/).
 
-Se quiser rodar por conta própria: é HTML, CSS e JavaScript estáticos. Sem npm, sem backend.
+Se quiser rodar por conta própria: é em HTML, CSS e JavaScript estáticos. Sem npm, sem backend.
 
 1. Sirva a pasta via HTTP (`https://` ou `localhost`). O service worker não registra a partir de um URL `file://`.
 2. Abra `index.html`.
 3. Se quiser, adicione à tela inicial / instale como app.
 
-Um comando se você tiver Python:
+Um único comando se você tiver Python instalado na máquina:
 
 ```bash
 python -m http.server
