@@ -1,5 +1,5 @@
 // NoPrecinho service worker: cache-first with background refresh.
-const C = "noprecinho-v2";
+const C = "noprecinho-v5";
 const PRECACHE = [
   "./",
   "./index.html",
@@ -15,7 +15,7 @@ const PRECACHE = [
 self.addEventListener("install", e => {
   e.waitUntil(
     caches.open(C)
-      .then(c => c.addAll(PRECACHE))
+      .then(c => c.addAll(PRECACHE.map(u => new Request(u, { cache: "reload" }))))
       .then(() => self.skipWaiting())
   );
 });
