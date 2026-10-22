@@ -43,7 +43,7 @@ h1{font-size:clamp(1.4rem,4vw,2rem);line-height:1.2;margin:0;font-weight:700}
 h2{font-size:1.2rem;margin:0;font-weight:700}
 header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
 .lead{margin:6px 0 20px;color:var(--muted);max-width:none;font-size:.9rem}
-.iconbtn{flex:none;width:44px;height:44px;padding:0;display:grid;place-items:center;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:50%}
+.iconbtn{flex:none;width:44px;height:44px;padding:0;display:grid;place-items:center;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:7px}
 .iconbtn svg{width:22px;height:22px}
 section.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
 .bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
@@ -179,7 +179,10 @@ ol.stores{list-style:none;margin:0;padding:0}
 ol.stores li{padding:10px 0;border-bottom:1px solid var(--line)}
 ol.stores .meter{height:6px;border-radius:3px;background:var(--line);margin-top:6px}
 ol.stores .meter span{display:block;height:100%;border-radius:3px;background:var(--accent)}
-.bar .acts{display:flex;flex-wrap:wrap;gap:8px}
+.bar .acts{display:flex;flex-wrap:nowrap;flex:none;gap:8px}
+.acts .iconbtn{border-color:var(--accent);color:var(--accent-text)}
+.acts .iconbtn.primary{background:var(--accent);color:var(--accent-ink)}
+.acts .iconbtn.primary:hover{color:var(--accent-ink)}
 
 /* ── "Did you mean?" banner ─────────────────────────────────────── */
 .dym{background:var(--soft);border:1px solid var(--accent);border-radius:8px;padding:10px 12px;margin:0 0 12px}

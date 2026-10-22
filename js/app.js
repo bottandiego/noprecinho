@@ -215,7 +215,7 @@
       qNoProd: "Produto não encontrado. Escolha um da lista.",
       qNeedSize: "O histórico deste produto tem quantidade: informe a quantidade e a unidade.",
       qUnit: "Sem como comparar: a unidade não bate com o histórico deste produto.",
-      qGreat: "Ótimo negócio", qStd: "Preço normal", qExp: "Caro",
+      qGreat: "No precinho!!!", qStd: "Preço normal", qExp: "Tá caro, sai fora",
       qVsLow: "vs. menor preço", qVsLast: "vs. último preço",
       sTitle: "Comparação entre lojas",
       sHint: "Índice da cesta: preço de cada loja em relação ao mais barato de cada item (100% = sempre o mais barato), ponderado pelo número de compras. Só entram itens com preços em 2 ou mais lojas.",
@@ -234,28 +234,28 @@
       fDiffN: "Diferença = Último (normalizado) − Menor (normalizado)",
       noCompare: "Não dá para comparar: o último preço não tem quantidade, mas o menor tem. Informe a quantidade nas próximas compras.",
       newLow: "Nova mínima!", lowSaved: "Nova mínima histórica! {p}: {v} em {s}.",
-      lead: "Registre o que você pagou. Cada preço aparece com o valor por Kg, L ou un ao lado, e o menor preço é sempre o de menor valor normalizado, para comparar embalagens de tamanhos diferentes.",
+      lead: "Preços comparados pelo valor normalizado (por Kg, L ou unidade), facilitando a comparação entre embalagens de tamanhos diferentes.",
       summary: "Resumo de preços", newPurchase: "Nova compra", settings: "Configurações",
       colProduct: "Produto", colLowest: "Menor preço", colLatest: "Último preço",
       colNominal: "Preço nominal", colActions: "Ações",
       one: "compra", many: "compras", atLowest: "No menor preço", above: "acima do menor",
       pack: "embalagem", noSize: "Sem embalagem informada", cheapest: "Mais barato por {u}",
       showCalc: "Ver cálculo", remove: "Remover", removeAria: "Remover {n} e todo o histórico",
-      empty: "Nenhuma compra ainda. Toque em \u201cNova compra\u201d para começar.",
+      empty: "Nenhuma compra ainda, chefia. Vai lá em \u201cNova compra\u201d para gente ter com o que brincar.",
       fProduct: "Produto", fPrice: "Preço pago", fStore: "Onde comprou",
       fSize: "Quantidade", fUnit: "Unidade de medida",
-      phProduct: "ex.: Leite integral", phPrice: "ex.: 4,99",
-      phStore: "ex.: Mercado do Bairro", phSize: "ex.: 500",
-      sizeHint: "Opcional. Gramas (g), mililitros (ml) ou unidades (un). Com a quantidade, o app compara o preço por Kg, por L ou por un.",
-      addHint: "Use sempre o mesmo nome para o mesmo produto (maiúsculas e espaços extras são ignorados). A data é registrada automaticamente.",
+      phProduct: "ex.: Leite Integral", phPrice: "ex.: 4,99",
+      phStore: "ex.: Mercadinho X", phSize: "ex.: 500",
+      sizeHint: "Opcional. Gramas (g), quilogramas (Kg), mililitros (ml), litros (L) ou unidades (un). Com a quantidade, o app compara o preço por Kg, por L ou por unidade.",
+      addHint: "Use sempre o mesmo nome para o mesmo produto (espaços extras são ignorados e cada palavra é capitalizada). A data é registrada automaticamente.",
       cancel: "Cancelar", savePurchase: "Salvar compra", close: "Fechar",
       eProduct: "Informe o nome do produto.", ePriceEmpty: "Informe o preço pago.",
-      ePriceBad: "Use um número com no máximo 2 casas decimais, como 4,99.",
-      ePriceZero: "O preço deve ser maior que zero.",
-      ePriceHigh: "Esse preço parece alto demais. Confira se há erro de digitação.",
+      ePriceBad: "Use um número com no máximo 2 casas decimais, ex.: 4,99.",
+      ePriceZero: "Tá de graça é? Capais memo.",
+      ePriceHigh: "Tá loco??? Preço parece alto demais, confere aí se é isso mesmo.",
       eStore: "Informe onde você comprou.",
-      eSizeBad: "Use um número maior que zero, como 500.",
-      eSizeHigh: "Esse tamanho parece grande demais. Confira a unidade.",
+      eSizeBad: "Use um número maior que zero, ex.: 500.",
+      eSizeHigh: "Calma lá, fera. Tamanho parece grande demais, confere aí se a unidade tá certa.",
       saved: "Salvo: {p} {v} em {s}.",
       calcTitle: "Como o resultado é calculado",
       calcEmpty: "Escolha \u201cVer cálculo\u201d em um produto para ver a conta.",
@@ -270,16 +270,16 @@
       decComma: "Vírgula (4,99)", decDot: "Ponto (4.99)",
       impTitle: "Backup e restauração",
       impHint: "As compras importadas são somadas às existentes; duplicadas são ignoradas.",
-      impBtn: "Importar arquivo CSV\u2026",
+      impBtn: "Importar arquivo CSV",
       impEmpty: "O arquivo está vazio ou só tem o cabeçalho.",
       impHeader: "Cabeçalho não reconhecido. São necessárias as colunas Produto, Preço e Local.",
       impRead: "Não foi possível ler o arquivo.",
       impDone: "Importadas: {a}. Duplicadas ignoradas: {d}. Com erro: {e}.",
       impLine: "Linha {n}: {m}",
       iProd: "produto ou local em branco", iPrice: "preço inválido",
-      iDate: "data inválida ou no futuro", iSize: "quantidade ou unidade inválida",
+      iDate: "data inválida ou no futuro, e viajantes do tempo não são bem-vindos", iSize: "quantidade ou unidade inválida",
       iMore: "\u2026 e mais {n} linha(s) com erro.",
-      expSummary: "Baixar resumo (CSV)", expLog: "Baixar histórico completo (CSV)",
+      expSummary: "Baixar resumo em CSV", expLog: "Baixar histórico completo em CSV",
       wipe: "Apagar dados do navegador",
       wipeFsa: "Apagar dados do navegador",
       localHint: "As configurações são sempre salvas neste navegador. Os dados de compras são salvos no arquivo JSON vinculado — o armazenamento do navegador é usado apenas como reserva temporária e é limpo automaticamente após cada gravação no arquivo.",
@@ -349,7 +349,7 @@
       phProduct: "e.g. Whole milk", phPrice: "e.g. 4.99",
       phStore: "e.g. Corner Market", phSize: "e.g. 500",
       sizeHint: "Optional. Grams (g), millilitres (ml) or units (un). With the quantity, the app compares price per Kg, per L or per unit.",
-      addHint: "Always use the same name for the same product (capitals and extra spaces are ignored). The date is recorded automatically.",
+      addHint: "Always use the same name for the same product (extra spaces are ignored and each word is capitalized). The date is recorded automatically.",
       cancel: "Cancel", savePurchase: "Save purchase", close: "Close",
       eProduct: "Enter the product name.", ePriceEmpty: "Enter the price you paid.",
       ePriceBad: "Use a number with at most 2 decimals, like 4.99.",
@@ -429,13 +429,20 @@
   function pad(n) { return ("0" + n).slice(-2); }
   function todayStr() { var d = new Date(); return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
 
-  // ─── Migration (old entries stored timestamps) ────────────────────────────────
-  var migrated = false;
-  log.forEach(function (e) {
-    if (!e.date) { var d = new Date(e.ts || Date.now()); e.date = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); migrated = true; }
-    if ("ts" in e) { delete e.ts; migrated = true; }
-  });
-  if (migrated) saveLog();
+  // ─── Migration (old entries stored timestamps; product display names) ─────────
+  function migrateEntries(entries) {
+    var changed = false;
+    entries.forEach(function (e) {
+      if (!e.date) { var d = new Date(e.ts || Date.now()); e.date = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); changed = true; }
+      if ("ts" in e) { delete e.ts; changed = true; }
+      if (e.product) {
+        var titled = titleCaseName(norm(e.product));
+        if (e.product !== titled) { e.product = titled; changed = true; }
+      }
+    });
+    return changed;
+  }
+  if (migrateEntries(log)) saveLog();
 
   // ─── Index ────────────────────────────────────────────────────────────────────
   var groups = {}, idx = { prod: {}, store: {} };
@@ -473,7 +480,7 @@
   }
   function applyLang() {
     document.documentElement.lang = settings.lang === "en" ? "en" : "pt-BR";
-    document.title = "NoPrecinho";
+    document.title = "noprecinho";
     applyTheme();
     Array.prototype.forEach.call(document.querySelectorAll("[data-i18n]"), function (n) { n.textContent = t(n.getAttribute("data-i18n")); });
     Array.prototype.forEach.call(document.querySelectorAll("[data-i18n-ph]"), function (n) { n.placeholder = t(n.getAttribute("data-i18n-ph")); });
@@ -493,8 +500,23 @@
   function stripSize(s) {
     return s.replace(/\s+\d+[,.]?\d*\s*(kg|g|ml|l|litro|litros|un|und|unid)\s*$/i, "").trim();
   }
+  // Title-case for display: "queijo mussarela" → "Queijo Mussarela".
+  // Keep common Portuguese (and English) particles lowercase unless they start the name.
+  var TITLE_SMALL = /^(a|as|o|os|à|às|ao|aos|de|da|do|das|dos|e|em|no|na|nos|nas|para|com|the|of|and|in)$/i;
+  function titleCaseWord(w) {
+    return w.split("-").map(function (part) {
+      if (!part) return part;
+      return part.charAt(0).toLocaleUpperCase("pt-BR") + part.slice(1).toLocaleLowerCase("pt-BR");
+    }).join("-");
+  }
+  function titleCaseName(s) {
+    return s.split(" ").map(function (w, i) {
+      if (i > 0 && TITLE_SMALL.test(w)) return w.toLocaleLowerCase("pt-BR");
+      return titleCaseWord(w);
+    }).join(" ");
+  }
   function cleanProductName(s) {
-    return norm(stripSize(s));
+    return titleCaseName(norm(stripSize(s)));
   }
 
   function groupNum(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, settings.decimal === "," ? "." : ","); }
@@ -1237,13 +1259,7 @@
       return fsaRead().then(function (fileData) {
         if (Array.isArray(fileData) && fileData.length >= log.length) {
           log = fileData;
-          // Re-run migration on file data
-          var m2 = false;
-          log.forEach(function (e) {
-            if (!e.date) { var d = new Date(e.ts || Date.now()); e.date = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); m2 = true; }
-            if ("ts" in e) { delete e.ts; m2 = true; }
-          });
-          if (m2) saveLog();
+          if (migrateEntries(log)) saveLog();
           rebuildIndex();
         }
       });
