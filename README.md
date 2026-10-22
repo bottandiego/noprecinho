@@ -40,7 +40,7 @@ If local storage is blocked, the app will warn you: data will not survive a refr
 
 ### Running it
 
-The app is published as a GitHub Page. You can just visit [https://bottandiego.github.io/noprecinho/](https://bottandiego.github.io/noprecinho/).
+The app is published as a GitHub Page. You can just visit [https://bottanpontocom.github.io/noprecinho/](https://bottanpontocom.github.io/noprecinho/).
 
 If you want to run it yourself: this is static HTML, CSS, and JavaScript. No npm, no backend.
 
@@ -102,7 +102,7 @@ Se o armazenamento local estiver bloqueado, o app avisa: os dados não sobrevive
 
 ### Como rodar
 
-O app está publicado como GitHub Page. Basta visitar [https://bottandiego.github.io/noprecinho/](https://bottandiego.github.io/noprecinho/).
+O app está publicado como GitHub Page. Basta visitar [https://bottanpontocom.github.io/noprecinho/](https://bottanpontocom.github.io/noprecinho/).
 
 Se quiser rodar por conta própria: é em HTML, CSS e JavaScript estáticos. Sem npm, sem backend.
 
